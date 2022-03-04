@@ -1,0 +1,147 @@
+// * Imports *
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab:wght@400;700&display=swap");
+@import "./burger";
+// * Connected fonts *
+
+$robotoCondensed: "Roboto Condensed", sans-serif;
+$robotoSlab: "Roboto Slab", serif;
+
+// * Variables *
+
+$fast-transition: all 0.1s ease;
+$average-transition: all 0.25s ease;
+$slow-transition: all 0.5s ease;
+
+$font-family: $robotoSlab; // Default font
+
+$container-size: 1250px;
+
+$md4: 1200px;
+$md3: 992px;
+$md2: 768px; // Tablets and mobile
+$md1: 600px;
+
+$soft-red: #ff4b4b;
+
+$soft-blue: #6969ff;
+$darker-blue: #3a3a8b;
+
+.body {
+   // * Default font *
+   font-family: $font-family;
+
+   // background-color: #eeeeee;
+   @media (max-width: $md2) {
+   }
+   @media (max-width: $md1) {
+   }
+
+   // * Adaptive helper
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      background-color: #e0e0e0;
+   }
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      background-color: #838383;
+   }
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      background-color: #524747;
+   }
+   @media (max-width: $md1) {
+      background-color: #1d1d1d;
+   }
+}
+
+// * Common styles
+
+.container {
+   width: 100%;
+   max-width: $container-size;
+   margin: 0px auto;
+
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      max-width: $container-size * 0.8;
+   }
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      max-width: $container-size * 0.6;
+   }
+
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-width: $container-size * 0.45;
+   }
+
+   @media (max-width: $md1) {
+      max-width: $container-size * 0.3;
+   }
+}
+
+.title {
+}
+
+.text {
+}
+
+.button {
+   padding: 6px 12px;
+   white-space: nowrap;
+   border: 1px solid black;
+   border-radius: 15px;
+   transition: $fast-transition;
+   &:hover {
+      color: white;
+      background-color: $soft-blue;
+      border: 1px solid $soft-blue;
+   }
+   &:active {
+      background-color: $darker-blue;
+      border: 1px solid $darker-blue;
+   }
+   &--small {
+      padding: 4px 8px;
+   }
+}
+
+.blackout {
+   min-width: 100vw;
+   min-height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-color: black;
+   opacity: 0;
+   transition: all 0.5s ease;
+   &.active {
+      opacity: 0.3;
+   }
+}
+
+.s-color {
+   &--soft-red {
+      color: $soft-red;
+   }
+}
+
+// *  header
+
+@import "./header";
+
+// * Breakpoints *
+
+@media (max-width: $md4) {
+}
+// tablets
+@media (max-width: $md3) {
+}
+//mobile
+@media (max-width: $md2) {
+}
+@media (max-width: $md1) {
+}

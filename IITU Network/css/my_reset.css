@@ -1,0 +1,31 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0px;
+   padding: 0px;
+   font-weight: 400;
+}
+div,
+ul,
+p,
+input {
+   margin: 0px;
+   padding: 0px;
+}
+
+/* remove list style */
+
+ul,
+ol {
+   list-style: none;
+}
+
+/* remove links text decoration, color */
+
+a {
+   text-decoration: none;
+   color: black;
+}

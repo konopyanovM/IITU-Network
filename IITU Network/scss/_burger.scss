@@ -1,0 +1,40 @@
+// burger
+.header__burger {
+   $burger-size: 20px; // ? size
+   $burger-color: black; // ? color
+
+   position: relative;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: $burger-size;
+   height: $burger-size * 0.9;
+   > span {
+      position: relative;
+      top: 0px;
+      width: $burger-size;
+      height: $burger-size/8;
+      display: block;
+      background-color: $burger-color;
+      border-radius: $burger-size/2; // ? border radius
+      transition: all 0.1s 0s ease;
+   }
+   &.active > span:nth-child(1) {
+      position: relative;
+      top: 43%;
+      transform: rotate(-45deg);
+   }
+   &.active > span:nth-child(2) {
+      transform: scale(0);
+   }
+   &.active > span:nth-child(3) {
+      position: relative;
+      top: -43%;
+      transform: rotate(45deg);
+   }
+}
+
+// Заблокировать скролл
+.asset-lock {
+   overflow: hidden;
+}
