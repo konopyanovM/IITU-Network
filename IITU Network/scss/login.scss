@@ -1,0 +1,53 @@
+@import "_library.scss";
+
+.login {
+   box-sizing: border-box;
+
+   max-width: 600px;
+   min-height: 370px;
+
+   margin: 140px auto 0px;
+   padding: 50px 52px;
+
+   box-shadow: 0px 5px 4px $color-1;
+   background-color: $blocks;
+
+   @media (max-width: $md3) {
+      margin-top: 120px;
+   }
+   @media (max-width: $md2) {
+      margin-top: 100px;
+   }
+   @media (max-width: $md1) {
+      margin-top: 80px;
+   }
+
+   &-error {
+      margin-bottom: 20px;
+   }
+}
+
+.login-form {
+   display: flex;
+   flex-direction: column;
+}
+.input {
+   min-height: 60px;
+
+   padding-left: 20px;
+
+   font-family: $robotoCondensed;
+   font-size: 24px;
+   color: $color-2;
+
+   border: none;
+   border-radius: 10px;
+
+   background-color: $background;
+}
+.login-form__input {
+   margin-bottom: 40px;
+   &:last-child {
+      margin-bottom: 0px;
+   }
+}

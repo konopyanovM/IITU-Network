@@ -1,0 +1,170 @@
+// * Imports *
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab:wght@400;700&display=swap");
+
+// * Connected fonts *
+
+$robotoCondensed: "Roboto Condensed", sans-serif;
+$robotoSlab: "Roboto Slab", serif;
+
+// * Variables *
+
+$fast-transition: all 0.1s ease;
+$average-transition: all 0.25s ease;
+$slow-transition: all 0.5s ease;
+
+$font-family: $robotoSlab; // Default font
+
+$container-size: 1250px;
+
+$md4: 1200px;
+$md3: 992px;
+$md2: 768px; // Tablets and mobile
+$md1: 600px;
+
+$background: #eee; // softer-grey
+$blocks: #dddddd; // soft-grey
+
+$color-1: #c0c0c0; // grey
+$color-2: #2c2c2c; // black
+$color-3: #ff4b4b; // soft-red
+$color-4: #6969ff; // soft-blue
+$color-5: #3a3a8b; // darker-blue
+.body {
+   // * Default font *
+   font-family: $font-family;
+
+   background-color: $background;
+   @media (max-width: $md2) {
+   }
+   @media (max-width: $md1) {
+   }
+
+   // * Adaptive helper
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      background-color: #e0e0e0;
+   }
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      background-color: #838383;
+   }
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      background-color: #524747;
+   }
+   @media (max-width: $md1) {
+      background-color: #1d1d1d;
+   }
+}
+
+// * Common styles
+
+.container {
+   width: 100%;
+   max-width: $container-size;
+   margin: 0px auto;
+
+   // laptops, pc
+   @media (min-width: $md3) and (max-width: $md4) {
+      max-width: $container-size * 0.8;
+   }
+
+   // tablets
+   @media (min-width: $md2) and (max-width: $md3) {
+      max-width: $container-size * 0.6;
+   }
+
+   //mobile
+   @media (min-width: $md1) and (max-width: $md2) {
+      max-width: $container-size * 0.45;
+   }
+
+   @media (max-width: $md1) {
+      max-width: $container-size * 0.3;
+   }
+}
+
+.block {
+   display: block;
+   border-radius: 15px;
+}
+
+.title {
+}
+
+.text {
+}
+
+.button {
+   padding: 6px 12px;
+   white-space: nowrap;
+
+   border: 1px solid black;
+   border-radius: 15px;
+   transition: $fast-transition;
+
+   cursor: pointer;
+   &:hover {
+      color: white;
+      background-color: $color-4;
+      border: 1px solid $color-4;
+   }
+   &:active {
+      color: white;
+      background-color: $color-5;
+      border: 1px solid $color-5;
+   }
+   &--small {
+      padding: 4px 8px;
+   }
+   &--input {
+      // max-width: 300px;
+      min-height: 60px;
+      position: relative;
+      top: 0px;
+      font-size: 24px;
+      font-family: $robotoCondensed;
+      letter-spacing: 2px;
+      box-shadow: 0px 4px 0px $color-2;
+      border-radius: 10px;
+      border: none;
+   }
+   &--input:active {
+      top: 2px;
+      box-shadow: 0px 1px 0px $color-2;
+   }
+}
+
+.blackout {
+   min-width: 100vw;
+   min-height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-color: black;
+   opacity: 0;
+   transition: all 0.5s ease;
+   &.active {
+      opacity: 0.3;
+   }
+}
+
+.error {
+   display: none;
+   font-family: $robotoSlab;
+   font-weight: bold;
+   color: $color-3;
+}
+
+@media (max-width: $md4) {
+}
+// tablets
+@media (max-width: $md3) {
+}
+//mobile
+@media (max-width: $md2) {
+}
+@media (max-width: $md1) {
+}

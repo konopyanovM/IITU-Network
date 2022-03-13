@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="css/my_reset.css">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/header.css">
-   <link rel="stylesheet" href="css/index.css">
+   <link rel="stylesheet" href="css/login.css">
    <!-- Title -->
    <title>IITU Network</title>
 </head>
@@ -30,7 +30,7 @@
                <li class="header-nav__item"><a href="#" class="header-nav__link">About</a></li>
             </ul>
          </nav>
-         <a href="login.html" class="header-login button">Log in</a>
+         <a href="#" class="header-login button">Log in</a>
          <div class="header-profile"><img src="img/icons/profile.svg" alt="profile" class="header-profile__img"></div>
       </div>
       <!-- Кнопка меню (Mobile) -->
@@ -42,16 +42,24 @@
 
       <!-- - -->
    </header>
-   <!-- <?php echo "Hi"; ?> -->
    <main class="main">
-      <section class="section">
-
-      </section>
+      <div class="container">
+         <div class="block login">
+            <div class="error login-error" id="error">Error</div>
+            <form action="#" method="GET" class="login-form" id="login-form">
+               <input type="email" name="email" id="email" class="input login-form__input" placeholder="Email" required>
+               <input type="password" name="password" id="password" class="input login-form__input"
+                  placeholder="Password" required>
+               <input type="submit" value="Log in" class="button button--input">
+            </form>
+         </div>
+      </div>
    </main>
    <!-- Для затемнения -->
    <div class="blackout"></div>
    <!-- JavaScript -->
    <script src="js/burger.js"></script>
+   <script src="js/login.js"></script>
 </body>
 
 </html>
