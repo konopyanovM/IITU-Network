@@ -181,65 +181,161 @@ body {
   color: #ff4b4b;
 }
 
-.login {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 600px;
-  min-height: 370px;
-  margin: 140px auto 0px;
-  padding: 50px 52px;
-  -webkit-box-shadow: 0px 5px 4px #c0c0c0;
-          box-shadow: 0px 5px 4px #c0c0c0;
+.discussions-container {
+  font-family: "Roboto Slab", serif;
+}
+
+.discussions-nav {
+  margin-top: 15px;
+  padding: 15px;
   background-color: #dddddd;
 }
 
-@media (max-width: 992px) {
-  .login {
-    margin-top: 120px;
-  }
+.discussions-body {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #dddddd;
 }
 
-@media (max-width: 768px) {
-  .login {
-    margin-top: 100px;
-  }
-}
-
-@media (max-width: 600px) {
-  .login {
-    margin-top: 80px;
-  }
-}
-
-.login-error {
+.discussion-card {
   margin-bottom: 20px;
+  padding: 10px;
+  background-color: #c0c0c0;
 }
 
-.login-form {
+.discussion-card:last-child {
+  margin-bottom: 0px;
+}
+
+.discussion-card__title {
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.input {
-  min-height: 60px;
-  padding-left: 20px;
-  font-family: "Roboto Condensed", sans-serif;
+.discussion-card__title-text {
+  display: block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   font-size: 24px;
-  color: #2c2c2c;
-  border: none;
-  border-radius: 10px;
-  background-color: #eee;
 }
 
-.login-form__input {
-  margin-bottom: 40px;
+.discussion-card__title-creator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
 }
 
-.login-form__input:last-child {
-  margin-bottom: 0px;
+.discussion-card__title-interpunct {
+  margin: 0px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+.discussion-card__title-creation-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
+}
+
+.discussion-card__tags-list {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.discussion-card__tags-item {
+  margin-right: 5px;
+  padding: 5px 10px;
+  letter-spacing: 0.2em;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.discussion-card__tags-item:nth-child(1) {
+  background-color: #91ffa3;
+}
+
+.discussion-card__tags-item:nth-child(2) {
+  background-color: #91a7ff;
+}
+
+.discussion-card__tags-item:nth-child(3) {
+  background-color: #ff9c91;
+}
+
+.discussion-card__tags-item:nth-child(4) {
+  background-color: #d791ff;
+}
+
+.discussion-card__tags-item:nth-child(5) {
+  background-color: #e8ff83;
+}
+
+.discussion-card__text {
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.discussion-card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.discussion-card-rating {
+  min-width: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Roboto Slab", serif;
+}
+
+.discussion-card-rating__value {
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+.discussion-card-rating__upvote {
+  padding: 0px 3px;
+  font-size: 1em;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.discussion-card__footer-info {
+  min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  opacity: 0.7;
 }
